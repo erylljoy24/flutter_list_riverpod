@@ -13,7 +13,6 @@ class UserNotifier extends StateNotifier<MovieState> {
     final response = await dio.get(
       'https://mocki.io/v1/1aa7c7e4-fe26-4cbf-ba4e-5dd87f429545',
     );
-    print('_printMovies ${response}');
     final List list = response.data['movies'];
     List<Movie> users = list.map((e) => Movie.fromJson(e)).toList();
     state = state.copyWith(users: users);
