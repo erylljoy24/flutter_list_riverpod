@@ -19,5 +19,4 @@ class UserNotifier extends StateNotifier<MovieState> {
   }
 }
 
-final userProvider = StateNotifierProvider<UserNotifier, MovieState>((ref) => UserNotifier(),
-);
+final userProvider = StateNotifierProvider<UserNotifier, MovieState>((ref) => UserNotifier());
